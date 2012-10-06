@@ -495,4 +495,16 @@ public class FMaze {
         if (again.equals("play again"))
             this.intro();
     }
+
+    public void hallway1() {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    public void hallway2() {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    public void hallway3() {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
 }
