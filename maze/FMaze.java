@@ -106,7 +106,11 @@ public class FMaze {
 
     void dragonroom() {
         System.out.println(
-            "You stumble upon a room with a dragon in it.  You quickly decide that there are two plausible actions to take.  Choose either \"hide\" to crawl in the shadows around the dragon or type \"bow\" to pick up a nearby bow and attempt to shoot the dragon through the eye and kill it.");
+            "You stumble upon a room with a dragon in it.  " +
+                "You quickly decide that there are two plausible actions to take.  " +
+                "Choose either \"hide\" to crawl in the shadows around the dragon " +
+                "or type \"bow\" to pick up a nearby bow " +
+                "and attempt to shoot the dragon through the eye and kill it.");
 
         Scanner TS     = new Scanner(System.in);
         String  choice = TS.nextLine();
@@ -114,17 +118,23 @@ public class FMaze {
 
         if (choice.equals("hide") && (partner == true)) {
             System.out.println(
-                "You crawled in the shadows around the dragon and managed to go to the next room unnoticed.  However, your partner the guard, who went the other way around, did get noticed and was eaten.");
+                "You crawled in the shadows around the dragon " +
+                    "and managed to go to the next room unnoticed.  " +
+                    "However, your partner the guard, who went the other way around, " +
+                    "did get noticed and was eaten.");
         }
 
         if (choice.equals("hide") && (partner == false)) {
             System.out.println(
-                "You crawled in the shadows around the dragon and managed to go to the next room unnoticed.");
+                "You crawled in the shadows around the dragon " +
+                    "and managed to go to the next room unnoticed.");
         }
 
         if (choice.equals("bow")) {
             System.out.println(
-                "You shot the bow at the dragon.  However, you missed and it glanced off its scales.  The dragon now noticed you and is now breathing fire on you.");
+                "You shot the bow at the dragon.  " +
+                    "However, you missed and it glanced off its scales.  " +
+                    "The dragon now noticed you and is now breathing fire on you.");
 
             for (int BurnChance = 0; BurnChance < 2; BurnChance++) {
                 int ChanceToBurn = (int) (Math.random() * 3);
@@ -144,7 +154,8 @@ public class FMaze {
 
                     case 0: {
                         JOptionPane.showMessageDialog(null,
-                            "Game over.  You ran out of lives.  The birds killed you nearly instantly.");
+                            "Game over.  You ran out of lives.  " +
+                                "The birds killed you nearly instantly.");
                         System.exit(1);
                     }
 
@@ -162,11 +173,17 @@ public class FMaze {
     void desert() {
         Scanner choiceScan = new Scanner(System.in);
         System.out.println(
-            "As you walk in, the heat blasts you instantly.  \"The voice was definetly right when it said WARM, SUNNY days.  This place is a desert!\", you think.");
+            "As you walk in, the heat blasts you instantly.  " +
+                "\"The voice was definetly right when it said WARM, SUNNY days.  " +
+                "This place is a desert!\", you think.");
         System.out.println(
-            "You start to grow thirsty as you slowly trek to the other side of the desert, to a far-off door you see.");
+            "You start to grow thirsty as you slowly trek to the other side of the desert, " +
+                "to a far-off door you see.");
         System.out.println(
-            "Eventually, you realize you need to get out faster.  You spot an eagle in a nest, sleeping.  Maybe it can carry you faster.  Type \"eagle\" to try to grab onto the eagle and hope it carries you to the door.");
+            "Eventually, you realize you need to get out faster.  " +
+                "You spot an eagle in a nest, sleeping.  " +
+                "Maybe it can carry you faster.  " +
+                "Type \"eagle\" to try to grab onto the eagle and hope it carries you to the door.");
         System.out.println("Type \"walk\" to continue walking along.");
 
         String choice = choiceScan.nextLine();
@@ -181,7 +198,8 @@ public class FMaze {
 
                 case 0: {
                     JOptionPane.showMessageDialog(null,
-                        "Game over.  You ran out of lives.  The birds killed you nearly instantly.");
+                        "Game over.  You ran out of lives.  " +
+                            "The birds killed you nearly instantly.");
                     System.exit(1);
                 }
 
