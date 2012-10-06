@@ -5,6 +5,7 @@ public class hallways extends FMaze {
         FMaze Hallways = new FMaze();
     }
 
+    @Override
     public void hallway1() {
         int test = 0;
         System.out.println("So, you chose hallway one.  " +
@@ -12,6 +13,7 @@ public class hallways extends FMaze {
         this.guard();
     }
 
+    @Override
     public void hallway2() {
         System.out.println(
             "Good choice.  You chose hallway two.  " +
@@ -19,6 +21,7 @@ public class hallways extends FMaze {
         this.desert();
     }
 
+    @Override
     public void hallway3() {
         System.out.println("Funny.  You chose hallway three.");
         this.snakes();
